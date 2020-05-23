@@ -1,18 +1,17 @@
-function main()
-    println("+----+----+")
-end
+# Chapter 4
+#------------
+using ThinkJulia
 
-function minor()
-    for i = 1:3
-        println("|    |    |")
+# Exercise 4-2
+function square(t)
+    for i in 1:4
+        forward(t, 100)
+        turn(t, -90)
     end
 end
 
+🐢= Turtle()
 
-function printgrid()
-    main()
-    minor()
-    main()
-    minor()
-    main()
+@svg begin
+    square(🐢)
 end
