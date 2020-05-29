@@ -29,3 +29,30 @@ end
 greet = "Hello"
 whom = "World"
 "$greet, $(whom)!" # The brackets around the whom variable used to separete the variable from the ! symbol
+
+
+function find(word, letter)
+    index = firstindex(word)
+    while index <= sizeof(word)
+        if word[index] == letter
+            return index
+        end
+        index = nextind(word, index)
+    end
+    -1
+end
+
+find("test", 'e')
+
+# Letters counter
+word = "banana"
+counter = 0
+for letter in word
+    if letter == 'a'
+        global counter = counter + 1
+    end
+end
+println(counter)
+
+findfirst("a", "banana")
+findnext("a", "banana", 4)
